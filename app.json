@@ -1,0 +1,52 @@
+{
+  "expo": {
+    "name": "Panahashi Baker",
+    "slug": "panahashi-baker",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "backgroundColor": "#FDF6EC"
+    },
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.panahashi.baker",
+      "infoPlist": {
+        "NSCameraUsageDescription": "Necesitamos la cámara para escanear el QR del cliente.",
+        "NSPhotoLibraryUsageDescription": "Para subir fotos de tus productos y logo."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#FDF6EC"
+      },
+      "package": "com.panahashi.baker",
+      "permissions": [
+        "CAMERA",
+        "READ_EXTERNAL_STORAGE"
+      ]
+    },
+    "plugins": [
+      "expo-router",
+      "expo-camera",
+      [
+        "expo-barcode-scanner",
+        {
+          "cameraPermission": "Necesitamos la cámara para escanear QR."
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Para subir fotos de tus productos."
+        }
+      ],
+      "expo-secure-store",
+      "expo-font"
+    ],
+    "scheme": "panahashi-baker",
+    "experiments": {
+      "typedRoutes": false
+    }
+  }
+}
